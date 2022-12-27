@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    width: 100%;
+}
+
+.body{
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-image: url(/img/new\ year\ pic.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-body{
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    justify-content: center;
+    align-items: center;
+}
+
+.hours, .days, .sec, .min{
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hours, .days, .min{
+    margin-right: 50px;
+}
+
+.letter{
+    font-size: 27px;
+}
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+} 
+
+
+.d-day{
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    background: linear-gradient(90deg, #f34804, #8806e6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.d-hour{
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #c31432, #240b36);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.d-min{
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #c31432, #240b36);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.d-sec{
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right, #c31432, #240b36);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@media only screen and (max-width: 500px){
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .hours, .days, .min, .sec{
+        flex-basis: 40%;
+        margin: 0;
+    }
+
+    .countdown-body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 900px){
+
+    .hours, .days, .min, .sec{
+        flex-basis: 30%;
+        margin: 0;
+    }
+
+    .countdown-body{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
