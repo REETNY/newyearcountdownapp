@@ -26,7 +26,7 @@ if(month === 1 && date === 1){
 }else{
     // initial call
     countDown();
-    setInterval(countDown(), 1000)
+    setInterval(countDown, 1000)
 }
 
 
